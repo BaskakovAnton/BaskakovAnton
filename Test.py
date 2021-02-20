@@ -7,7 +7,7 @@
 # c. * Решить задачу под пунктом b , не создавая новый список.
 
 list_numbers = []
-for i in range(1, 100):
+for i in range(1, 1000):
     if i % 2 != 1:
         pass
     else:
@@ -26,7 +26,7 @@ while idx < len(list_numbers):
     lst_number = map(int, lst_str)
     s = sum(lst_number)
     if s % 7 == 0:
-        sum_numbers = sum_numbers + s
+        sum_numbers = sum_numbers + list_numbers[idx]
     list_numbers_1.append(s)
     idx += 1
 
@@ -48,8 +48,7 @@ while idx_1 < len(list_numbers):
 
 
 
-print(list_numbers)
-print(list_numbers_1)
+#print(list_numbers_1)
 print(sum_numbers)
-print(list_numbers_2)
+#print(list_numbers_2)
 print(sum_numbers_1)
