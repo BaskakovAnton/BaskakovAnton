@@ -2,12 +2,12 @@ res = []
 summ = 0
 
 for i in range(1, 1000, 2):
-    buf = str(i ** 3)
-    char: str
-    for char in buf:
-        summ = summ + int(char)
-    if summ % 7 == 0:
-        res.append(summ)
+    #buf = str(i ** 3)
+    #char: str
+    #for char in buf:
+        #summ = summ + int(char)
+    #if summ % 7 == 0:
+        res.append(i**3)
 
 print(res)
 

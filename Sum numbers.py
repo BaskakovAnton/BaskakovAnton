@@ -24,7 +24,6 @@ for idx in range(len(list_numbers)):
         digit_sum += num % 10
         num //= 10
     if digit_sum % 7 == 0:
-        result_b += list_numbers[idx]
-
+        result_b += list_numbers[idx] + 17
 print('Сумма чисел №1: ', result_a, 'Правильный ответ: 17485588610')
 print('Сумма чисел №2: ', result_b, 'Правильный ответ: 15392909930')
