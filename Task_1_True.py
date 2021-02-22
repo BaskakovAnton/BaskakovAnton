@@ -1,21 +1,21 @@
 # 1 вариант________________________________________________________________
 
-# duration = int(input('Введите данные: '))
+duration = int(input('Введите данные: '))
 
-# days = duration // 3600 // 24
-# hours = duration // 3600 - days * 24
-# inutes = duration // 60 % 60
-# seconds = duration % 60
+days = duration // 3600 // 24
+hours = duration // 3600 - days * 24
+minutes = duration // 60 % 60
+seconds = duration % 60
 
-# print('Дни: ', days, ',', ' часы: ', hours, ',', ' минуты: ',
-# minutes, ',', ' секунды: ', seconds, '.', sep='')
+print('Дни: ', days, ',', ' часы: ', hours, ',', ' минуты: ',
+      minutes, ',', ' секунды: ', seconds, '.', sep='')
 
 # 2 вариант________________________________________________________________
 
-# duration = int(input('Введите данные: '))
-# timepiece = [duration // 86400, duration // 3600 % 24, duration // 60 % 60, duration % 60]
+duration = int(input('Введите данные: '))
+timepiece = [duration // 86400, duration // 3600 % 24, duration // 60 % 60, duration % 60]
 
-# print(f'duration = {duration} сек\n{timepiece[0]} дн {timepiece[1]} час {timepiece[2]} мин {timepiece[3]} сек')
+print(f'duration = {duration} сек\n{timepiece[0]} дн {timepiece[1]} час {timepiece[2]} мин {timepiece[3]} сек')
 
 # 3 вариант________________________________________________________________
 
