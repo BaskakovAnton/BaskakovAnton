@@ -2,8 +2,13 @@
 # возвращающую словарь, в котором ключи — первые буквы имён, а значения — списки,
 # содержащие имена, начинающиеся с соответствующей буквы
 
-def thesaurus(param, param1, param2, param3):
-    pass
+# def thesaurus():
+# for i in thesaurus:
+# dictionary = {}
+# word = i
+# print(i)
+# idx = word[0]
+# print(idx)
+# dictionary[idx] = [i]
 
 
-thesaurus("Иван", "Мария", "Петр", "Илья")
