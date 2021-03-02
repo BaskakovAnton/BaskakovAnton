@@ -1,10 +1,14 @@
+# *(вместо задачи 1) Доработать предыдущую функцию в num_translate_adv(): реализовать
+# корректную работу с числительными, начинающимися с заглавной буквы — результат тоже
+# должен быть с заглавной. Например:
+
 def num_translate():
     for i in dic_word:
-        if userword == i:
-            return (dic_word.get(i))
-        elif userword != i:
-            if userword.lower() == i:
-                return (dic_word.get(i).capitalize())
+        if user_word == i:  # проверяю словарь на совпадение вводимого значения с ключами словаря
+            return dic_word.get(i)  # при совпадении вывожу значение
+        elif user_word != i:  # если совпадений нет
+            if user_word.lower() == i:  # меняю регистр вводимого значения и проверяю словарь снова
+                return dic_word.get(i).capitalize()  # при совпадении вывожу значение в вверхнем регистре
 
 
 dic_word = {
@@ -21,6 +25,6 @@ dic_word = {
     'ten': 'десять',
 }
 
-userword = input('Введите значение: ')
+user_word = input('Введите значение: ')
 answer = num_translate()
 print(answer)
