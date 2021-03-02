@@ -27,4 +27,4 @@ dic_word = {
 
 user_word = input('Введите значение: ')
 answer = num_translate()
-print(answer)
+print(num_translate())
