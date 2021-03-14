@@ -8,21 +8,16 @@
 # меньше объема ОЗУ.
 
 
-from itertools import zip_longest
-
-users = open("users.csv", "r", encoding="utf-8")
-for line in users:
-    users_list = line.split()
-    for i in users_list:
-        i = i.replace(',', ' ')
-        print(i)
-
-hobby = open("hobby.csv", "r", encoding="utf-8")
-for line in hobby:
-    print(line, end="")
-
-#rez = zip_longest(users, hobby, fillvalue=None)
-#print(*rez)
+# users = open("users.csv", "r", encoding="utf-8")
+# for line in users:
+#     users_list = line.split()
+#     for i in users_list:
+#         i = i.replace(',', ' ')
+#         print(i)
+#
+# hobby = open("hobby.csv", "r", encoding="utf-8")
+# for line in hobby:
+#     print(line, end="")
 
 # with open("users.csv", "r", encoding="utf-8") as users:
 #     users_list = ((line.replace(',', ' ')) for line in users)
@@ -32,7 +27,21 @@ for line in hobby:
 #     hobby_list = ((line.replace(',', ' ')) for line in hobby)
 #     original_hobby = hobby_list
 #     print(*hobby_list)
+# users.close()
+# hobby.close()
 
+from itertools import zip_longest
+from json import dump
 
-users.close()
-hobby.close()
+with open("users.csv", "r", encoding="utf-8") as users:
+    with open("hobby.csv", "r", encoding="utf-8") as hobby:
+
+        if len(users.readline()) > len(hobby.readline()):
+            with open('dict_n_h.json', 'w', encoding='utf-8') as f:
+                all_list = zip_longest(users, hobby, fillvalue=None)
+                my_dict = {str(el[0]): (el[1].strip()) for el in all_list}
+
+                dump(my_dict, f, ensure_ascii=False, indent=4)
+            print(my_dict)
+        else:
+            exit(1)
