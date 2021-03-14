@@ -42,6 +42,6 @@ with open("users.csv", "r", encoding="utf-8") as users:
                 my_dict = {str(el[0]): (el[1].strip()) for el in all_list}
 
                 dump(my_dict, f, ensure_ascii=False, indent=4)
-            print(my_dict)
+            print(my_dict,)
         else:
             exit(1)
