@@ -35,13 +35,12 @@ from json import dump
 
 with open("users.csv", "r", encoding="utf-8") as users:
     with open("hobby.csv", "r", encoding="utf-8") as hobby:
-
         if len(users.readline()) > len(hobby.readline()):
             with open('dict_n_h.json', 'w', encoding='utf-8') as f:
                 all_list = zip_longest(users, hobby, fillvalue=None)
                 my_dict = {str(el[0]): (el[1].strip()) for el in all_list}
 
                 dump(my_dict, f, ensure_ascii=False, indent=4)
-            print(my_dict,)
+            print(my_dict)
         else:
             exit(1)
