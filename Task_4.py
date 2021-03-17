@@ -5,12 +5,3 @@
 # двоеточие и пробел после ФИО:
 # Иванов,Иван,Иванович: скалолазание,охота
 # Петров,Петр,Петрович: горные лыжи
-
-with open("users.csv", "r", encoding="utf-8") as users:
-    with open("hobby.csv", "r", encoding="utf-8") as hobby:
-        if len(users.readline()) > len(hobby.readline()):
-            with open('users_hobby.txt', 'w', encoding='utf-8') as f:
-
-
-        else:
-            exit(1)
