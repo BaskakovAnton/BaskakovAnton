@@ -1,22 +1,19 @@
-# Задача 2
-#
-# Даны списки:
-#
-# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-#
-# b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].
-#
-# Нужно вернуть список, который состоит из элементов, общих для этих двух списков.
-
-
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 9]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-
-
-result = [elem for elem in a if elem in b]
-
-# for i in a:
-#     if i in b:
-#         c.append(i)
-
-print(result)
+x = float(input("Введите значение x ="))
+y = float(input("Введите значение y ="))
+z = input("Введите оператор (+, -, /, *, mod, pow, div) =")
+if z == '+':
+    result = x + y
+elif z == '-':
+    result = x - y
+elif z == pow:
+    result = pow(x, y)
+elif z == '*':
+    result = x * y
+elif y != 0:
+    if z == '/':
+        result = x / y
+elif z == 'div':
+    result = x // y
+elif z == 'mod':
+    result = x % y
+print("Результат вычислений =", result)
