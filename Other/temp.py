@@ -1,26 +1,15 @@
-a = float(input())
-b = float(input())
-c = input()
-if c == '+':
-    print(a + b)
-elif c == '-':
-    print(a - b)
-elif c == '/':
-    if b == 0:
-        print("Деление на 0!")
-    else:
-        print(a / b)
-elif c == '*':
-    print(a * b)
-elif c == 'mod':
-    if b == 0:
-        print("Деление на 0!")
-    else:
-        print(a % b)
-elif c == 'pow':
-    print(a ** b)
-elif c == 'div':
-    if b == 0:
-        print("Деление на 0!")
-    else:
-        print(a // b)
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+
+
+# a = 7
+# b = 10
+# c = 5
+# d = 6
+
+for j in range(5, 6 + 1):
+    print(j)
+    for i in range(7, 10 + 1):
+        print(i, i * j, end='\n')
